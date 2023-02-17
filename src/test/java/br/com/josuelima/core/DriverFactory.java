@@ -16,15 +16,15 @@ public class DriverFactory {
     public static DesiredCapabilities desiredCapabilities;
     private static AndroidDriver<MobileElement> driver;
 
-    public static AndroidDriver<MobileElement> getDriver(){
-        if(driver == null){
+    public static AndroidDriver<MobileElement> getDriver() {
+        if (driver == null) {
             createDriver();
         }
         return driver;
     }
 
-    public static void killDriver(){
-        if(driver != null){
+    public static void killDriver() {
+        if (driver != null) {
             driver.quit();
             driver = null;
         }
@@ -36,15 +36,15 @@ public class DriverFactory {
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus_5X_API_24");
         desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
-//        desiredCapabilities.setCapability("appPackage", "com.android.calculator2");
-//        desiredCapabilities.setCapability("appActivity", "com.android.calculator2.Calculator");
+//      desiredCapabilities.setCapability("appPackage", "com.android.calculator2");
+//      desiredCapabilities.setCapability("appActivity", "com.android.calculator2.Calculator");
         desiredCapabilities.setCapability(MobileCapabilityType.APP, "C:/Users/Public/workspace-QA/automation-appium-mob-project/src/test/resources/CTAppium_1_2.apk");
 
         try {
             driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), desiredCapabilities);
-        }catch (MalformedURLException e){
+        } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 }

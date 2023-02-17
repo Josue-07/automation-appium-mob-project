@@ -1,4 +1,4 @@
-package br.com.josuelima.appium;
+package br.com.josuelima.appium.tests;
 
 
 import io.appium.java_client.MobileElement;
