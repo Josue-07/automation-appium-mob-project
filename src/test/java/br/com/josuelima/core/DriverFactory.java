@@ -16,6 +16,10 @@ public class DriverFactory {
     public static DesiredCapabilities desiredCapabilities;
     private static AndroidDriver<MobileElement> driver;
 
+    private DriverFactory(){
+
+    }
+
     public static AndroidDriver<MobileElement> getDriver() {
         if (driver == null) {
             createDriver();

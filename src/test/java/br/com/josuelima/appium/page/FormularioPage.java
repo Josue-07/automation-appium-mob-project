@@ -4,8 +4,6 @@ import io.appium.java_client.MobileBy;
 
 public class FormularioPage extends BasePage {
 
-    //private DSL dsl = new DSL();
-
     public void preencherInputDoNome(String nome) {
         escrever(MobileBy.AccessibilityId("nome"), nome);
 
@@ -43,7 +41,12 @@ public class FormularioPage extends BasePage {
         clicar(MobileBy.xpath("//android.widget.Button/*[@index='0']"));
     }
 
+    public void clicarBotaoSalvarDemorado(){
+        clicar(MobileBy.xpath("//android.widget.Button/*[@text='SALVAR DEMORADO']"));
+    }
     public boolean validarInformacoesDeCadastro(String texto) {
+        esperarElementoSerVisivel(MobileBy.xpath("//*[starts-with(@text, '" + texto + "')]"),10);
         return isElementoVisivel(MobileBy.xpath("//*[starts-with(@text, '" + texto + "')]"));
     }
+
 }

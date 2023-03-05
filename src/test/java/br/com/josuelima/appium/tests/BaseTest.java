@@ -1,18 +1,11 @@
 package br.com.josuelima.appium.tests;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Rule;
+import org.junit.*;
 import org.junit.rules.TestName;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-
-import java.io.File;
-import java.io.IOException;
-
-import static br.com.josuelima.core.DriverFactory.getDriver;
-import static br.com.josuelima.core.DriverFactory.killDriver;
+import org.openqa.selenium.*;
+import java.io.*;
+import static br.com.josuelima.core.DriverFactory.*;
 
 public class BaseTest {
 
