@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: br.com.josuelima.appium.tests.AbasTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.997 sec <<< FAILURE! - in br.com.josuelima.appium.tests.AbasTest
+deveInteragirComAbas(br.com.josuelima.appium.tests.AbasTest)  Time elapsed: 8.928 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Connection refused: connect
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'LAPTOP-3HMD36V1', ip: '10.0.0.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: AndroidDriver
+	at br.com.josuelima.appium.tests.AbasTest.deveInteragirComAbas(AbasTest.java:17)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at br.com.josuelima.appium.tests.AbasTest.deveInteragirComAbas(AbasTest.java:17)
+
+deveInteragirComAbas(br.com.josuelima.appium.tests.AbasTest)  Time elapsed: 8.929 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Connection refused: connect
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'LAPTOP-3HMD36V1', ip: '10.0.0.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: AndroidDriver
+Caused by: java.net.ConnectException: Connection refused: connect
+
